@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Peter Iziomo Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+.reduced-height {
+    height: 600px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Peter Iziomo</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	        	<div class="one-third img reduced-height" style="background-image: url(images/P_pic.jpeg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hi!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Peter Iziomo</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Full Home Automation   ',
+						'Home Cinema   ',
+						'AV Collaboration    ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>AV Systems Designer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/piziomo" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/piziomo" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/PPic.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span> Peter Iziomo </span></p>
+										<p><span class="title-s">Job Role: </span> <span>  AV Systems Designer </span></p>
+										<p><span class="title-s">Experience: </span> <span>3 Years </span></p>
+										<p><span class="title-s">Address: </span> <span>Birmingham, UK </span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>CAD & Technical Drawing</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Home Cinema Design</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>AV System Design</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Lighting Control</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Home Networking</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>An experienced CEDIA certified Electronic Systems Designer with a passion for IoT, AV Systems Design/integration. 
+									With 3+ years of hands-on experience, I specialize in designing and implementing high-performance AV, security, and automation systems for residential and commercial projects.
+									My expertise in Crestron, Lutron, Sonos, Hikvision, and Control4, Wisdom Audio, etc. allow me to create efficient, user-friendly, and high-tech environments tailored to client needs.
+									I take pride in delivering seamless, intuitive, and functional solutions that enhance user experience and efficiency. 
+									I am eager to bring my technical knowledge and problem-solving abilities to a dynamic team.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Electronics Systems Design &amp; Integration</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Residential, Home Cinema, AV Collaboration &amp; Hospitality</span></li>
+									<li class="d-flex"><span>Education:</span> <span>BEng. Civil Engineering &amp; MSc. Big Data and Digital Futures </span></li>
+									<li class="d-flex"><span>Language:</span> <span>English </span></li>
+									<li class="d-flex"><span>Design Tools:</span> <span>AutoCAD, Revit, AV Snap, Microsoft Visio, Lutro Home Designer &amp; Crestron</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>K-Framework, Google Workspace, Exce, &amp; Sonos</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Technology, Artificial Intelligence, Traveling &amp; Teaching</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/piziomo" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Experienced Electronic Systems Designer with over 3 years of expertise in improving business operations through data-driven designs, leveraging CAD tools and continuous R&D. Created project-based templates and worksheets for IoT systems design and integration, achieving a 50% increase in efficiency and delivery timeline of project documentations. </p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-2024</span>
+						<h2>Lead Systems designer</h2>
+						<span class="position">CED Africa</span>
+						<p class="mt-4">Hired as the lead AV designer to lead a team across two cities for a custom electronics distribution company specialised in premium AV consulting, design, and distribution services for integration companies across West Africa. 
+							<ul>
+								<li>Managed end-to-end IoT/AV automation projects in commercial and residential buildings, achieving 90%+ customer satisfaction.</li>
+								<li>Led a team of four, improving project efficiency and team performance by 20% through collaboration and skill development.</li>
+								<li>Coordinated the design of smart building projects, from product selection to budgeting and execution, with over 95% client satisfaction.</li>
+								<li>Delivered end-to-end design and execution of key projects, including Lutron lighting for Microsoft, AV for GTBank, and Crestron video conferencing for UAC Nigeria, totaling $5M within budget and timeline.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2023</span>
+						<h2>Systems Designer</h2>
+						<span class="position">Hausba Smarthomes Limited</span>
+						<p class="mt-4">Electronic systems designer role, leading the development of architectural and engineering drawings for high-end AV automation projects. 
+							<ul>
+								<li>Designed and implemented innovative processes, enhancing system design efficiency by 30% and streamlining delivery processes.</li>
+								<li>Conducted R&D on AV technologies, introducing solutions that enhanced user experience and led to a 15% boost in profitability.</li>
+								<li>Developed detailed schematics and design documentations, improving accuracy and clarity, reducing troubleshooting time by 25%.</li>
+								<li>Successfully managed and executed three complex design projects—Mar & Mor office, Ijebu Mansion, and Maitama Home Cinema—within one year, gaining technical expertise and attaining CIT qualification.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-2025</span>
+    					<h2>University of Warwick, UK</h2>
+    					<span class="position">Masters of Science (MSc)</span>
+    					<p class="mt-4">Big Data and Digital Futures</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2013-2018</span>
+    					<h2>University of Port-Harcourt, Nigeria</h2>
+    					<span class="position">Bachelor of Engineering</span>
+    					<p class="mt-4">Civil and Environmental Enginnering</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1f25bNnsu6nIjWdZWov3i8SoF1C-20xw9/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below is a selection of some projects I have designed and managed over the past few years.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.canva.com/design/DAGpr0TMqm4/0JtPMJ07cl8MVhggR-yp3Q/view?utm_content=DAGpr0TMqm4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0a9990ae26" class="block-20 zoom-effect" style="background-image: url('images/Alexence Cinema jpeg.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.canva.com/design/DAGpr0TMqm4/0JtPMJ07cl8MVhggR-yp3Q/view?utm_content=DAGpr0TMqm4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0a9990ae26">Immersive Dolby Atmos 9.4.4 Home Cinema</a></h3>
+                <p>Designed a 9.4.4 Dolby Atmos home theater with Wisdom Audio speakers and a Maestro X7 processor, integrating Control4 automation for seamless control of AV, lighting, and ambiance. Enhanced acoustics and comfort with Vicoustic treatments and Lutron RA2 Select, delivering a premium, immersive cinematic experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.canva.com/design/DAGprw_yFYE/ZcKhn5G9WokciSOqz_Cfew/view?utm_content=DAGprw_yFYE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he73cb05d04" class="block-20 zoom-effect" style="background-image: url('images/Lagos Project.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.canva.com/design/DAGprw_yFYE/ZcKhn5G9WokciSOqz_Cfew/view?utm_content=DAGprw_yFYE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he73cb05d04">Lagos Experience Center Cinema</a></h3>
+                <p>Designed and implemented a 9.4.4 Dolby Atmos home theater using Wisdom Audio loudspeakers and Trinnov Altitude 16 for immersive, precision-tuned sound. Integrated Control4 and Lutron RA2 Select systems to provide seamless control over AV, lighting, and climate for an optimized cinematic experience.
+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://www.canva.com/design/DAGpryW-MgA/xYSiIeRDbptYTwzW5Hbkbg/view?utm_content=DAGpryW-MgA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h40297e0afa" class="block-20 zoom-effect" style="background-image: url('images/Mar Mor Office.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.canva.com/design/DAGpryW-MgA/xYSiIeRDbptYTwzW5Hbkbg/view?utm_content=DAGpryW-MgA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h40297e0afa">High-tech Office Space</a></h3>
+                <p>Designed and installed a custom Crestron boardroom and training room to enable high-performance collaboration and presentations. Enhanced the workspace with Lutron smart lighting, a public address system, and integrated Hikvision and ADC security systems for improved functionality and safety.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.canva.com/design/DAGpr8rZwdY/T9_u2UuMHSySoJnh0MTV7w/view?utm_content=DAGpr8rZwdY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hece5dcc9ce" class="block-20 zoom-effect" style="background-image: url('images/Asokoro Mansion.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.canva.com/design/DAGpr8rZwdY/T9_u2UuMHSySoJnh0MTV7w/view?utm_content=DAGpr8rZwdY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hece5dcc9ce">Asokoro Highend Residential Automation</a></h3>
+				  <p>Developed and integrated a Sonos multi-room audio system with K-Array and Sonance speakers for premium sound throughout the home. Implemented Lutron HomeWorks, Crestron touchscreens, and advanced security solutions to deliver a seamless, high-tech luxury automation experience.
+</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.canva.com/design/DAGpsLI2S0E/mFexgCEVYcI6J0odUXo9TQ/view?utm_content=DAGpsLI2S0E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h23f9b08cbb" class="block-20 zoom-effect" style="background-image: url('images/IJCH.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.canva.com/design/DAGpsLI2S0E/mFexgCEVYcI6J0odUXo9TQ/view?utm_content=DAGpsLI2S0E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h23f9b08cbb">Ijebu Country Home Automation</a></h3>
+				  <p>Designed and implemented a fully integrated home automation system featuring Sonos audio, Sonance speakers, and Lutron HomeWorks for intelligent lighting. Integrated Crestron control, a Dolby Atmos cinema with Sonodyne and Trinnov, and advanced security solutions to deliver a seamless, high-performance living experience.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+				<a href="https://drive.google.com/file/d/1zaWuwqC2N6XMQf7jVN06JpFLCm6eHBZJ/view" class="text-decoration-none text-reset">
+				<div class="text">
+					<strong class="number">2024</strong>
+					<span>CEDIA ESC-D Certification</span>
+				</div>
+				</a>
+			</div>
+			</div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+				<a href="https://drive.google.com/file/d/1m7Fjzjsp5FXn_UOFzPYKiix8Hha2FYCi/view" class="text-decoration-none text-reset">
+				<div class="text">
+					<strong class="number">2023</strong>
+					<span>K-Array Certified Designer</span>
+				</div>
+				</a>
+			</div>
+			</div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+				<a href="https://drive.google.com/file/d/1gjZ4YgRSE8QQsCxw98OndrdnWx-uvC63/view" class="text-decoration-none text-reset">
+				<div class="text">
+					<strong class="number">2023</strong>
+					<span>Lutron HomeWorks Qualification</span>
+				</div>
+				</a>
+			</div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+				<a href="https://drive.google.com/file/d/1LAHn8GxNxmF31K5sJtYMh8e8IYDhuaFl/view" class="text-decoration-none text-reset">
+				<div class="text">
+					<strong class="number">2022</strong>
+					<span>Crestron Flex Certification</span>
+				</div>
+				</a>
+			</div>
+			</div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+				<a href="https://drive.google.com/file/d/1-VEGTPo78Q8_JCQJGOsS-PBTpBJfMJLC/view" class="text-decoration-none text-reset">
+				<div class="text">
+					<strong class="number">2022</strong>
+					<span>CEDIA CIT Certification</span>
+				</div>
+				</a>
+			</div>
+			</div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/Bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More about me on<span> LinkedIn </span> </h2>
+						<div class="heading"> <h4> I enjoy creating personalized experiences using innovative technology. </h4>
+						<br>
+						<p><a href="https://www.linkedin.com/in/piziomo" class="btn btn-primary py-3 px-5">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="tel://0101010101">Birmingham, United Kingdom</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+447551118532</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">piziomo@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1f25bNnsu6nIjWdZWov3i8SoF1C-20xw9/view?usp=sharing">Resume</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://www.linkedin.com/in/piziomo" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/piziomo"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/piziomo/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
